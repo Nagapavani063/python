@@ -1465,6 +1465,344 @@ fruits.clear()
 print(fruits)  # []
 </pre>
 
+<h1>Python Tuples</h1>
+
+<h2>Step 1: What is a Tuple?</h2>
+<p>
+A <strong>tuple</strong> in Python is an ordered collection of items, similar to a list, 
+but it is <strong>immutable</strong>.  
+Tuples allow duplicate elements and can contain different data types.
+</p>
+
+<h2>Step 2: Creating a Tuple</h2>
+<pre>
+Using parentheses
+fruits = ("apple", "banana", "cherry")
+
+Using tuple() constructor
+numbers = tuple([1, 2, 3, 4])
+
+Tuple with different data types
+mixed = ("Python", 10, 3.14, True)
+</pre>
+
+<h2>Step 3: Accessing Tuple Elements (Indexing)</h2>
+<pre>
+fruits = ("apple", "banana", "cherry")
+print(fruits[0])   # apple
+print(fruits[1])   # banana
+print(fruits[-1])  # cherry (last element)
+</pre>
+
+<h2>Step 4: Slicing Tuples</h2>
+<pre>
+numbers = (10, 20, 30, 40, 50)
+print(numbers[1:4])   # (20, 30, 40)
+print(numbers[:3])    # (10, 20, 30)
+print(numbers[2:])    # (30, 40, 50)
+print(numbers[::-1])  # (50, 40, 30, 20, 10)
+</pre>
+
+<h2>Step 5: Tuples are Immutable</h2>
+<p>
+Once a tuple is created, you cannot change its elements.
+</p>
+<pre>
+fruits = ("apple", "banana", "cherry")
+# fruits[1] = "orange"   # This will cause an error
+</pre>
+
+<h2>Step 6: Tuple Built-in Functions</h2>
+<ul>
+  <li><code>len()</code> – returns the number of elements</li>
+  <li><code>count()</code> – counts occurrences of a value</li>
+  <li><code>index()</code> – returns the index of the first occurrence of a value</li>
+</ul>
+
+<h2>Step 7: Example of Tuple Functions</h2>
+<pre>
+numbers = (1, 2, 3, 2, 4, 2)
+print(len(numbers))     # 6
+print(numbers.count(2)) # 3
+print(numbers.index(3)) # 2
+</pre>
+
+<h2>Step 8: Advantages of Tuples</h2>
+<ul>
+  <li>Tuples are immutable, so their data is safe from accidental modification</li>
+  <li>Tuples can be used as keys in dictionaries</li>
+  <li>Tuples are faster than lists for iteration</li>
+</ul>
+<h2> Step 9:List vs Tuple</h2>
+
+<p>
+Lists are <strong>mutable</strong> (can be changed), while tuples are <strong>immutable</strong> (cannot be changed).
+</p>
+
+<h2>Example:</h2>
+<pre>
+<h3>List (mutable)</h3>
+fruits_list = ["apple", "banana", "cherry"]
+fruits_list[1] = "orange"   # Change element
+fruits_list.append("kiwi")  # Add element
+print("List:", fruits_list)  # Output: ['apple', 'orange', 'cherry', 'kiwi']
+
+
+<h3>Tuple (immutable)</h3>
+fruits_tuple = ("apple", "banana", "cherry")
+#fruits_tuple[1] = "orange"  # This will cause an error
+print("Tuple:", fruits_tuple)  # Output: ('apple', 'banana', 'cherry')
+</pre>
+
+<h1>Python Sets</h1>
+
+<h2>Step 1: What is a Set?</h2>
+<p>
+A <strong>set</strong> in Python is an <strong>unordered</strong> collection of unique elements.  
+Sets are <strong>mutable</strong> but cannot contain duplicate items.
+</p>
+
+<h2>Step 2: Creating a Set</h2>
+<pre>
+#Using curly braces
+fruits = {"apple", "banana", "cherry"}
+# Using set() constructor
+numbers = set([1, 2, 3, 4, 4, 2])
+print(numbers)  # Output: {1, 2, 3, 4} (duplicates removed)
+</pre>
+
+<h2>Step 3: Accessing Elements</h2>
+<p>
+Sets are unordered, so you cannot access elements by index.  
+You can loop through a set to access its elements.
+</p>
+<pre>
+fruits = {"apple", "banana", "cherry"}
+for fruit in fruits:
+    print(fruit)
+</pre>
+<h1>Python Set Built-functions</h1>
+
+<h2>1. add()</h2>
+<p>Adds a single element to the set.</p>
+<pre>
+fruits = {"apple", "banana", "cherry"}
+fruits.add("kiwi")
+print(fruits)  # Output: {'apple', 'banana', 'cherry', 'kiwi'}
+</pre>
+
+<h2>2. remove()</h2>
+<p>Removes an element from the set. Raises an error if the element does not exist.</p>
+<pre>
+fruits = {"apple", "banana", "cherry"}
+fruits.remove("banana")
+print(fruits)  # Output: {'apple', 'cherry'}
+</pre>
+
+<h2>3. discard()</h2>
+<p>Removes an element from the set. Does not raise an error if the element does not exist.</p>
+<pre>
+fruits = {"apple", "banana", "cherry"}
+fruits.discard("orange")  # No error
+print(fruits)  # Output: {'apple', 'banana', 'cherry'}
+</pre>
+
+<h2>4. pop()</h2>
+<p>Removes and returns an arbitrary element from the set.</p>
+<pre>
+fruits = {"apple", "banana", "cherry"}
+item = fruits.pop()
+print(item)    # Output: could be any element
+print(fruits)  # Remaining elements
+</pre>
+
+<h2>5. clear()</h2>
+<p>Removes all elements from the set.</p>
+<pre>
+fruits = {"apple", "banana", "cherry"}
+fruits.clear()
+print(fruits)  # Output: set()
+</pre>
+
+<h2>6. union()</h2>
+<p>Returns a new set containing all elements from both sets.</p>
+<pre>
+A = {1, 2, 3}
+B = {3, 4, 5}
+print(A.union(B))  # Output: {1, 2, 3, 4, 5}
+</pre>
+
+<h2>7. intersection()</h2>
+<p>Returns a new set with elements common to both sets.</p>
+<pre>
+A = {1, 2, 3}
+B = {3, 4, 5}
+print(A.intersection(B))  # Output: {3}
+</pre>
+
+<h2>8. difference()</h2>
+<p>Returns a new set with elements in the first set but not in the second.</p>
+<pre>
+A = {1, 2, 3}
+B = {3, 4, 5}
+print(A.difference(B))  # Output: {1, 2}
+print(B.difference(A))  # Output: {4, 5}
+</pre>
+
+<h1>Python Dictionary </h1>
+
+<h2>Step 1: What is a Dictionary?</h2>
+<p>
+A <strong>dictionary</strong> in Python is an <strong>unordered</strong> collection of <strong>key-value pairs</strong>.  
+Dictionaries are <strong>mutable</strong> and allow fast access to values using keys.  
+Keys must be <strong>unique</strong> and <strong>immutable</strong> (like strings, numbers, or tuples).
+</p>
+
+<h2>Step 2: Creating a Dictionary</h2>
+<pre>
+# Using curly braces
+student = {"name": "Alice", "age": 20, "grade": "A"}
+
+#Using dict() constructor
+student = dict(name="Alice", age=20, grade="A")
+</pre>
+
+<h2>Step 3: Accessing Values</h2>
+<pre>
+student = {"name": "Alice", "age": 20, "grade": "A"}
+
+#Access by key
+print(student["name"])  # Alice
+print(student.get("age"))  # 20
+</pre>
+
+<h2>Python Dictionaries are Mutable</h2>
+<p>
+Dictionaries in Python are <strong>mutable</strong>, which means you can change, add, or remove key-value pairs after creation.
+</p>
+
+<h1>Python Dictionary Built-in Functions</h1>
+<h2>1. keys()</h2>
+<p>Returns all the keys in a dictionary.</p>
+<pre>
+print(student.keys())  # Output: dict_keys(['name', 'age', 'grade'])
+</pre>
+
+<h2>2. values()</h2>
+<p>Returns all the values in a dictionary.</p>
+<pre>
+print(student.values())  # Output: dict_values(['Alice', 21, 'A'])
+</pre>
+
+<h2>3. items()</h2>
+<p>Returns all key-value pairs as tuples.</p>
+<pre>
+print(student.items())  
+# Output: dict_items([('name', 'Alice'), ('age', 21), ('grade', 'A')])
+</pre>
+
+<h2>4. get()</h2>
+<p>Returns the value for the specified key. Returns None if key does not exist.</p>
+<pre>
+print(student.get("age"))    # Output: 21
+print(student.get("city"))   # Output: None
+</pre>
+
+<h2>5. pop()</h2>
+<p>Removes the specified key and returns its value.</p>
+<pre>
+age = student.pop("age")
+print(age)      # Output: 21
+print(student)  # Output: {'name': 'Alice', 'grade': 'A'}
+</pre>
+
+<h2>6. popitem()</h2>
+<p>Removes and returns the last inserted key-value pair as a tuple.</p>
+<pre>
+item = student.popitem()
+print(item)     # Output: ('grade', 'A')
+print(student)  # Output: {'name': 'Alice'}
+</pre>
+
+<h2>7. update()</h2>
+<p>Updates the dictionary with new key-value pairs.</p>
+<pre>
+student.update({"age": 22, "city": "New York"})
+print(student)  
+# Output: {'name': 'Alice', 'age': 22, 'city': 'New York'}
+</pre>
+
+<h2>8. clear()</h2>
+<p>Removes all items from the dictionary.</p>
+<pre>
+student.clear()
+print(student)  # Output: {}
+</pre>
+<h1>Dictionary vs Set vs List</h1>
+<ul>
+  <li><strong>List:</strong> Ordered collection of elements. Mutable. Allows duplicates. Defined using <code>[]</code>.</li>
+  <li><strong>Set:</strong> Unordered collection of unique elements. Mutable. Defined using <code>{}</code> or <code>set()</code>.</li>
+  <li><strong>Dictionary:</strong> Unordered collection of key-value pairs. Mutable. Keys must be unique and immutable. Defined using <code>{key: value}</code>.</li>
+</ul>
+
+<h2>1. Syntax Examples</h2>
+<pre>
+#List
+fruits_list = ["apple", "banana", "cherry"]
+
+#Set
+fruits_set = {"apple", "banana", "cherry"}
+
+#Dictionary
+student_dict = {"name": "Alice", "age": 21}
+</pre>
+<h2>2. Summary Table</h2>
+<table>
+  <tr>
+    <th>Feature</th>
+    <th>List</th>
+    <th>Set</th>
+    <th>Dictionary</th>
+  </tr>
+  <tr>
+    <td>Ordered</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>No (keys unordered)</td>
+  </tr>
+  <tr>
+    <td>Mutable</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Duplicates Allowed</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>Keys No, Values Yes</td>
+  </tr>
+  <tr>
+    <td>Access by Index/Key</td>
+    <td>Index</td>
+    <td>No Index</td>
+    <td>Key</td>
+  </tr>
+  <tr>
+    <td>Use Case</td>
+    <td>Ordered data collection</td>
+    <td>Unique items, mathematical set operations</td>
+    <td>Key-value mapping, fast lookup</td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
 
 
 
