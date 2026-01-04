@@ -537,6 +537,957 @@ print(my_set)
 {1, 2, 3}
 </pre>
 
+<h1>Variables in Python</h1>
+
+<p>
+A <strong>variable</strong> in Python is used to store data in memory.
+It acts as a container for values such as numbers, text, or objects.
+</p>
+
+<h2>What is a Variable?</h2>
+<p>
+A variable is a name that refers to a value. In Python, you do not need to
+declare the type of a variable explicitly. The type is decided automatically
+based on the value assigned.
+</p>
+
+<h2>Creating Variables</h2>
+<p>
+Variables are created when you assign a value using the <code>=</code> operator.
+</p>
+
+<pre>
+x = 10
+name = "Python"
+price = 99.5
+</pre>
+
+<h2>Rules for Naming Variables</h2>
+<ul>
+  <li>Variable names must start with a letter or underscore (_)</li>
+  <li>They cannot start with a number</li>
+  <li>Only letters, numbers, and underscores are allowed</li>
+  <li>Variable names are case-sensitive</li>
+  <li>Keywords cannot be used as variable names</li>
+</ul>
+
+<h2>Valid Variable Names</h2>
+<pre>
+age = 25
+_total = 100
+student_name = "Pavani"
+</pre>
+
+<h2>Invalid Variable Names</h2>
+<pre>
+1name = "Error"
+total-price = 500
+class = "Python"
+</pre>
+
+<h2>Assigning Multiple Values</h2>
+<p>
+Python allows assigning multiple variables in a single line.
+</p>
+
+<pre>
+a, b, c = 10, 20, 30
+</pre>
+
+<h2>Same Value to Multiple Variables</h2>
+<pre>
+x = y = z = 50
+</pre>
+
+<h2>Dynamic Typing</h2>
+<p>
+Python is dynamically typed, meaning a variable can change its data type.
+</p>
+
+<pre>
+x = 10
+x = "Hello"
+</pre>
+
+<h2>Checking Variable Type</h2>
+<pre>
+x = 10
+print(type(x))
+</pre>
+
+<h1>Why Do We Use Variables?</h1>
+
+<p>
+Variables are used in Python to <strong>store data values</strong> so that they
+can be <strong>reused, modified, and processed</strong> easily throughout a program.
+</p>
+
+<h2>Reasons for Using Variables</h2>
+
+<h3>1. Store Data</h3>
+<p>
+Variables allow us to store different types of data such as numbers, text,
+and results of calculations.
+</p>
+<pre>
+age = 25
+</pre>
+
+<h3>2. Reuse Values</h3>
+<p>
+Once a value is stored in a variable, it can be used multiple times in the program.
+</p>
+<pre>
+price = 100
+total = price + 20
+</pre>
+
+<h3>3. Improve Code Readability</h3>
+<p>
+Meaningful variable names make programs easier to read and understand.
+</p>
+<pre>
+marks = 85
+</pre>
+
+<h3>4. Modify Data Easily</h3>
+<p>
+The value stored in a variable can be updated whenever required.
+</p>
+<pre>
+count = 1
+count = count + 1
+</pre>
+
+<h3>5. Perform Calculations</h3>
+<p>
+Variables help perform arithmetic and logical operations efficiently.
+</p>
+<pre>
+a = 10
+b = 5
+result = a + b
+</pre>
+
+<h3>6. Store User Input</h3>
+<p>
+Variables store values entered by the user during program execution.
+</p>
+<pre>
+name = input("Enter your name: ")
+</pre>
+
+<h1>Type Conversions in Python</h1>
+
+<p>
+<strong>Type conversion</strong> in Python refers to the process of converting
+one data type into another. Python supports both <strong>implicit</strong> and
+<strong>explicit</strong> type conversion.
+</p>
+
+<h2>Types of Type Conversion</h2>
+<ul>
+  <li>1.Implicit Type Conversion</li>
+  <li>2.Explicit Type Conversion (Type Casting)</li>
+</ul>
+
+<h2>1. Implicit Type Conversion</h2>
+<p>
+In implicit type conversion, Python automatically converts one data type
+to another without user intervention. This usually happens when different
+data types are used together in an expression.
+</p>
+
+<pre>
+a = 10
+b = 2.5
+result = a + b
+print(result)
+</pre>
+
+<p>
+In the above example, Python converts the integer value <code>10</code> into
+a float automatically.
+</p>
+
+<h2>2. Explicit Type Conversion (Type Casting)</h2>
+<p>
+In explicit type conversion, the programmer manually converts one data type
+to another using built-in functions.
+</p>
+
+<h3>Common Type Casting Functions</h3>
+<ul>
+  <li><code>int()</code> – converts to integer</li>
+  <li><code>float()</code> – converts to float</li>
+  <li><code>str()</code> – converts to string</li>
+  <li><code>bool()</code> – converts to boolean</li>
+</ul>
+
+<h3>Examples of Explicit Type Conversion</h3>
+
+<h1>Common Type Conversions in Python</h1>
+
+<p>
+Python allows converting one data type into another using built-in
+type casting functions. Below are <strong>six common types of type conversions</strong>
+with examples.
+</p>
+
+<h2>1. Integer to Float</h2>
+<p>
+Converts an integer value into a floating-point number.
+</p>
+<pre>
+x = 10
+y = float(x)
+print(y)
+</pre>
+
+<h2>2. Integer to String</h2>
+<p>
+Converts an integer value into a string.
+</p>
+<pre>
+x = 25
+y = str(x)
+print(y)
+</pre>
+
+<h2>3. Float to Integer</h2>
+<p>
+Converts a float value into an integer. The decimal part is removed.
+</p>
+<pre>
+x = 9.8
+y = int(x)
+print(y)
+</pre>
+
+<h2>4. Float to String</h2>
+<p>
+Converts a float value into a string.
+</p>
+<pre>
+x = 3.14
+y = str(x)
+print(y)
+</pre>
+
+<h2>5. String to Integer</h2>
+<p>
+Converts a numeric string into an integer.
+</p>
+<pre>
+x = "50"
+y = int(x)
+print(y)
+</pre>
+
+<h2>6. String to Float</h2>
+<p>
+Converts a numeric string into a floating-point number.
+</p>
+<pre>
+x = "7.5"
+y = float(x)
+print(y)
+</pre>
+
+<h1>Python Operators</h1>
+
+<p>
+Operators in Python are special symbols used to <strong>perform operations</strong>
+on variables and values, such as arithmetic calculations, comparisons, and
+logical decisions.
+</p>
+
+<h2>Types of Operators in Python</h2>
+<ul>
+  <li>1.Arithmetic Operators</li>
+  <li>2.Assignment Operators</li>
+  <li>3.Comparison (Relational) Operators</li>
+  <li>4.Logical Operators</li>
+  <li>5.Bitwise Operators</li>
+  <li>6.Membership Operators</li>
+</ul>
+
+<hr>
+
+<h2>1. Arithmetic Operators</h2>
+<p>Used to perform mathematical operations.</p>
+
+<pre>
++   Addition
+-   Subtraction
+*   Multiplication
+/   Division
+%   Modulus
+**  Exponentiation
+//  Floor Division
+</pre>
+
+<pre>
+a = 10
+b = 3
+print(a + b)
+print(a % b)
+print(a ** b)
+</pre>
+
+<hr>
+
+<h2>2. Assignment Operators</h2>
+<p>Used to assign values to variables.</p>
+
+<pre>
+=   Assign
++=  Add and assign
+-=  Subtract and assign
+*=  Multiply and assign
+/=  Divide and assign
+%=  Modulus and assign
+</pre>
+
+<pre>
+x = 5
+x += 3
+print(x)
+</pre>
+
+<hr>
+
+<h2>3. Comparison (Relational) Operators</h2>
+<p>Used to compare two values and return True or False.</p>
+
+<pre>
+==  Equal to
+!=  Not equal to
+>   Greater than
+<   Less than
+>=  Greater than or equal to
+<=  Less than or equal to
+</pre>
+
+<pre>
+a = 10
+b = 20
+print(a > b)
+</pre>
+
+<hr>
+
+<h2>4. Logical Operators</h2>
+<p>Used to combine conditional statements.</p>
+
+<pre>
+and   Logical AND
+or    Logical OR
+not   Logical NOT
+</pre>
+
+<pre>
+x = 10
+y = 5
+print(x > 5 and y < 10)
+</pre>
+
+<hr>
+
+<h2>5. Bitwise Operators</h2>
+<p>Used to perform operations at the bit level.</p>
+
+<pre>
+&   AND
+|   OR
+^   XOR
+~   NOT
+<<  Left Shift
+>>  Right Shift
+</pre>
+
+<pre>
+a = 5
+b = 3
+print(a & b)
+</pre>
+
+<hr>
+
+<h2>6. Membership Operators</h2>
+<p>Used to test whether a value is present in a sequence.</p>
+
+<pre>
+in       Returns True if value is present
+not in   Returns True if value is not present
+</pre>
+
+<pre>
+x = [1, 2, 3]
+print(2 in x)
+</pre>
+
+<h1>Python Libraries</h1>
+
+<h2>What is a Library?</h2>
+<p>
+A <strong>library</strong> is a collection of pre-written code, modules, and
+functions that helps programmers perform common tasks easily without
+writing code from scratch.
+</p>
+
+<p>
+Libraries improve productivity by providing ready-made solutions for
+tasks such as mathematical calculations, data processing, file handling,
+and web development.
+</p>
+
+<hr>
+
+<h2>Libraries in Python</h2>
+<p>
+Python provides a rich set of libraries that make it a powerful and
+easy-to-use programming language.
+</p>
+
+<h3>1. Standard Libraries</h3>
+<p>
+These libraries come pre-installed with Python.
+</p>
+
+<ul>
+  <li><strong>math</strong> – mathematical operations</li>
+  <li><strong>random</strong> – generate random numbers</li>
+  <li><strong>datetime</strong> – date and time operations</li>
+  <li><strong>os</strong> – operating system interactions</li>
+  <li><strong>sys</strong> – system-specific parameters</li>
+</ul>
+
+<pre>
+import math
+print(math.sqrt(16))
+</pre>
+
+<hr>
+
+<h3>2. Third-Party Libraries</h3>
+<p>
+These libraries are developed by the Python community and must be
+installed separately using <code>pip</code>.
+</p>
+
+<ul>
+  <li><strong>numpy</strong> – numerical computing</li>
+  <li><strong>pandas</strong> – data analysis</li>
+  <li><strong>matplotlib</strong> – data visualization</li>
+  <li><strong>requests</strong> – HTTP requests</li>
+  <li><strong>django</strong> – web development</li>
+</ul>
+
+<pre>
+pip install numpy
+</pre>
+
+<hr>
+
+<h3>3. User-Defined Libraries</h3>
+<p>
+These are custom libraries created by programmers to organize their own code.
+</p>
+
+<pre>
+# mylibrary.py
+def add(a, b):
+    return a + b
+</pre>
+
+<pre>
+import mylibrary
+print(mylibrary.add(5, 3))
+</pre>
+
+<hr>
+
+<h2>Advantages of Using Libraries</h2>
+<ul>
+  <li>Saves time and effort</li>
+  <li>Reduces code complexity</li>
+  <li>Improves code reusability</li>
+  <li>Enhances productivity</li>
+</ul>
+
+<h1>Built-in Functions in Python</h1>
+
+<p>
+<strong>Built-in functions</strong> in Python are pre-defined functions that are
+available by default. These functions help perform common tasks without
+importing any library.
+</p>
+
+<h2>Why Use Built-in Functions?</h2>
+<ul>
+  <li>No need to import modules</li>
+  <li>Easy to use</li>
+  <li>Save development time</li>
+  <li>Improve code readability</li>
+</ul>
+
+<hr>
+
+<h2>Common Built-in Functions in Python</h2>
+
+<h3>1. print()</h3>
+<p>Displays output on the screen.</p>
+<pre>
+print("Hello Python")
+</pre>
+
+<h3>2. input()</h3>
+<p>Accepts input from the user.</p>
+<pre>
+name = input("Enter your name: ")
+</pre>
+
+<h3>3. type()</h3>
+<p>Returns the data type of a value.</p>
+<pre>
+x = 10
+print(type(x))
+</pre>
+
+<h3>4. len()</h3>
+<p>Returns the length of a string, list, or tuple.</p>
+<pre>
+text = "Python"
+print(len(text))
+</pre>
+
+<h3>5. int()</h3>
+<p>Converts a value into an integer.</p>
+<pre>
+x = "10"
+print(int(x))
+</pre>
+
+<h3>6. float()</h3>
+<p>Converts a value into a float.</p>
+<pre>
+x = 5
+print(float(x))
+</pre>
+
+<h3>7. str()</h3>
+<p>Converts a value into a string.</p>
+<pre>
+x = 100
+print(str(x))
+</pre>
+
+<h3>8. max()</h3>
+<p>Returns the largest value.</p>
+<pre>
+numbers = [10, 20, 30]
+print(max(numbers))
+</pre>
+
+<h3>9. min()</h3>
+<p>Returns the smallest value.</p>
+<pre>
+numbers = [10, 20, 30]
+print(min(numbers))
+</pre>
+
+<h3>10. sum()</h3>
+<p>Returns the sum of all values.</p>
+<pre>
+numbers = [1, 2, 3]
+print(sum(numbers))
+</pre>
+
+<h3>11. abs()</h3>
+<p>Returns the absolute (positive) value.</p>
+<pre>
+x = -15
+print(abs(x))
+</pre>
+
+<h3>12. round()</h3>
+<p>Rounds a number to the nearest integer.</p>
+<pre>
+x = 3.6
+print(round(x))
+</pre>
+
+<h1>Strings in Python</h1>
+
+<h2>What is a String?</h2>
+<p>
+A <strong>string</strong> in Python is a sequence of characters used to
+store text data. Strings are enclosed within single quotes (<code>' '</code>),
+double quotes (<code>" "</code>), or triple quotes (<code>''' '''</code> or
+<code>""" """</code>).
+</p>
+
+<h3>Examples</h3>
+<pre>
+name = "Python"
+message = 'Hello World'
+text = """Welcome to Python Programming"""
+</pre>
+
+<hr>
+
+<h2>Creating a String</h2>
+<p>
+We create a string by assigning text to a variable.
+</p>
+<pre>
+name = "Python"
+</pre>
+
+<h2>Accessing a String</h2>
+<p>
+Each character in a string has an index position starting from 0.
+</p>
+<pre>
+s = "Python"
+print(s[0])   # P
+print(s[1])   # y
+</pre>
+
+
+<h2>Mutable or Immutable?</h2>
+<p>
+Strings in Python are <strong>immutable</strong>.
+This means that once a string is created, its value cannot be changed.
+</p>
+
+<h3>Example</h3>
+<pre>
+s = "Python"
+s[0] = "J"   # Error
+</pre>
+
+<p>
+To modify a string, you must create a new string.
+</p>
+
+<pre>
+s = "Python"
+s = "J" + s[1:]
+print(s)
+</pre>
+
+<h2>Built-in String Functions (Methods)</h2>
+<p>
+Python provides many built-in methods to perform operations on strings.
+</p>
+
+<h3>1. len()</h3>
+<p>Returns the length of the string.</p>
+<pre>
+s = "Python"
+print(len(s))
+</pre>
+
+<h3>2. lower()</h3>
+<p>Converts all characters to lowercase.</p>
+<pre>
+s = "PYTHON"
+print(s.lower())
+</pre>
+
+<h3>3. upper()</h3>
+<p>Converts all characters to uppercase.</p>
+<pre>
+s = "python"
+print(s.upper())
+</pre>
+
+<h3>4. capitalize()</h3>
+<p>Converts the first character to uppercase.</p>
+<pre>
+s = "python"
+print(s.capitalize())
+</pre>
+
+<h3>5. title()</h3>
+<p>Converts the first letter of each word to uppercase.</p>
+<pre>
+s = "python programming"
+print(s.title())
+</pre>
+
+<h3>6. strip()</h3>
+<p>Removes spaces from the beginning and end of the string.</p>
+<pre>
+s = "  hello  "
+print(s.strip())
+</pre>
+
+<h3>7. replace()</h3>
+<p>Replaces one substring with another.</p>
+<pre>
+s = "I like Java"
+print(s.replace("Java", "Python"))
+</pre>
+
+<h3>8. split()</h3>
+<p>Splits the string into a list.</p>
+<pre>
+s = "Python is easy"
+print(s.split())
+</pre>
+
+<h3>9. find()</h3>
+<p>Returns the index of the first occurrence of a substring.</p>
+<pre>
+s = "Python"
+print(s.find("t"))
+</pre>
+
+<h3>10. count()</h3>
+<p>Counts the number of occurrences of a character or substring.</p>
+<pre>
+s = "banana"
+print(s.count("a"))
+</pre>
+<h2>11. isnumeric()</h2>
+<p>
+Checks whether the string contains only numeric characters.
+</p>
+<pre>
+s = "12345"
+print(s.isnumeric())
+</pre>
+
+<h2>12.isalnum()</h2>
+<p>
+Checks whether the string contains only alphabets and numbers.
+</p>
+<pre>
+s = "Python123"
+print(s.isalnum())
+</pre>
+<h2>13. isalpha()</h2>
+<p>
+Checks whether the string contains only alphabets.
+</p>
+<pre>
+s = "Python"
+print(s.isalpha())
+</pre>
+
+<h2>14.islower()</h2>
+<p>
+Checks whether the string contains only lowercase letters.
+</p>
+<pre>
+s = "python"
+print(s.islower())
+</pre>
+<h2>15. isupper()</h2>
+<p>
+Checks whether the string contains only uppercase letters.
+</p>
+<pre>
+s = "PYTHON"
+print(s.isupper())
+</pre>
+
+<h2>16. startswith()</h2>
+<p>
+Checks whether the string starts with the given value.
+</p>
+<pre>
+s = "Python Programming"
+print(s.startswith("Python"))
+</pre>
+
+<h2>17. endswith()</h2>
+<p>
+Checks whether the string ends with the given value.
+</p>
+<pre>
+s = "Python Programming"
+print(s.endswith("Programming"))
+</pre>
+
+<h1>Python Lists</h1>
+
+<h2> What is a List?</h2>
+<p>
+A <strong>list</strong> in Python is a collection of items which can be of 
+any data type. Lists are <strong>ordered, changeable (mutable)</strong>, 
+and allow duplicate values.
+</p>
+
+<h2>Creating a List</h2>
+<pre>
+fruits = ["apple", "banana", "cherry"]
+numbers = [1, 2, 3, 4, 5]
+mixed = ["Python", 10, 3.14, True]
+</pre>
+
+<h2>Accessing List Items (Indexing)</h2>
+<pre>
+fruits = ["apple", "banana", "cherry"]
+print(fruits[0])   # apple
+print(fruits[1])   # banana
+print(fruits[-1])  # cherry (last item)
+</pre>
+<h2>Slicing lists</h2>
+<p>
+List slicing is a technique in Python to access a <strong>subset of elements</strong> 
+from a list. You can extract elements by specifying a <strong>start index</strong>, 
+an <strong>end index</strong>, and an optional <strong>step</strong>.
+</p>
+
+<h2>Slicing Formula:</h2>
+<p>
+<code>list_name[start : end : step]</code>
+</p>
+<ul>
+  <li><strong>start</strong> → index to start from (inclusive)</li>
+  <li><strong>end</strong> → index to go up to (exclusive)</li>
+  <li><strong>step</strong> → number of elements to skip (optional, default = 1)</li>
+</ul>
+
+<h2>Example:</h2>
+<pre>
+numbers = [10, 20, 30, 40, 50]
+
+#Slice the list from index 1 to 4
+subset = numbers[1:4]
+
+ #Output: [20, 30, 40]
+</pre>
+
+<h2>Python Lists are Mutable</h2>
+<p>
+In Python, <strong>mutable</strong> means the data can be changed after it is created.  
+Unlike strings or tuples, lists can be modified — you can change, add, or remove elements.
+</p>
+<h1>Built-in Functions in lists </h1>
+
+<h2>1. append()</h2>
+<p>Adds an item to the end of the list.</p>
+<pre>
+fruits = ["apple", "banana", "cherry"]
+fruits.append("kiwi")
+print(fruits)  # ["apple", "banana", "cherry", "kiwi"]
+</pre>
+
+<h2>2. insert()</h2>
+<p>Adds an item at a specific index.</p>
+<pre>
+fruits = ["apple", "banana", "cherry"]
+fruits.insert(1, "mango")  # Insert at index 1
+print(fruits)  # ["apple", "mango", "banana", "cherry"]
+</pre>
+
+<h2>3. remove()</h2>
+<p>Removes the first occurrence of a value.</p>
+<pre>
+fruits = ["apple", "banana", "cherry", "banana"]
+fruits.remove("banana")
+print(fruits)  # ["apple", "cherry", "banana"]
+</pre>
+
+<h2>4. pop()</h2>
+<p>Removes an item by index and returns it. By default removes the last item.</p>
+<pre>
+fruits = ["apple", "banana", "cherry"]
+item = fruits.pop()  # Removes last item
+print(item)   # cherry
+print(fruits) # ["apple", "banana"]
+</pre>
+
+<h2>5. del</h2>
+<p>Deletes an item at a specific index or the entire list.</p>
+<pre>
+fruits = ["apple", "banana", "cherry"]
+del fruits[1]
+print(fruits)  # ["apple", "cherry"]
+</pre>
+
+<h2>6. len()</h2>
+<p>Returns the number of items in a list.</p>
+<pre>
+numbers = [1, 2, 3, 4]
+print(len(numbers))  # 4
+</pre>
+
+<h2>7. sort()</h2>
+<p>Sorts the list in ascending order.</p>
+<pre>
+numbers = [4, 2, 1, 3]
+numbers.sort()
+print(numbers)  # [1, 2, 3, 4]
+</pre>
+
+<h2>8. reverse()</h2>
+<p>Reverses the order of the list.</p>
+<pre>
+numbers = [1, 2, 3, 4]
+numbers.reverse()
+print(numbers)  # [4, 3, 2, 1]
+</pre>
+
+<h2>9. count()</h2>
+<p>Counts how many times a value appears in the list.</p>
+<pre>
+fruits = ["apple", "banana", "apple", "cherry"]
+print(fruits.count("apple"))  # 2
+</pre>
+
+<h2>10. index()</h2>
+<p>Returns the index of the first occurrence of a value.</p>
+<pre>
+fruits = ["apple", "banana", "cherry"]
+print(fruits.index("banana"))  # 1
+</pre>
+
+<h2>11. extend()</h2>
+<p>Adds multiple items from another list to the end of the current list.</p>
+<pre>
+fruits = ["apple", "banana"]
+more_fruits = ["mango", "kiwi"]
+fruits.extend(more_fruits)
+print(fruits)  # ["apple", "banana", "mango", "kiwi"]
+</pre>
+
+<h2>12. clear()</h2>
+<p>Removes all items from the list.</p>
+<pre>
+fruits = ["apple", "banana", "cherry"]
+fruits.clear()
+print(fruits)  # []
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
