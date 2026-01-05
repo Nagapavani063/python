@@ -3805,14 +3805,429 @@ d.showC()
   <li>Supports polymorphism</li>
 </ul>
 
+<h1>Polymorphism in Python</h1>
+
+<p>
+<strong>Polymorphism</strong> is one of the core concepts of 
+<strong>Object-Oriented Programming (OOP)</strong>. The word 
+"Polymorphism" comes from Greek: <em>poly</em> = many, <em>morph</em> = forms.
+It means an object or method can take <strong>multiple forms</strong>.
+</p>
+
+<hr>
+
+<h3>Why Use Polymorphism?</h3>
+
+<ul>
+  <li>Allows the same interface to be used for different data types</li>
+  <li>Makes code more flexible and reusable</li>
+  <li>Supports method overriding and method overloading</li>
+  <li>Helps in implementing real-world behavior in programs</li>
+  <li>Reduces the complexity of code and improves readability</li>
+</ul>
+
+<hr>
+
+<h2>Types of Polymorphism in Python</h2>
+
+<p>
+Polymorphism in Python can be mainly divided into two types:
+</p>
+
+<ul>
+  <li><strong>1.Method Overloading</strong></li>
+  <li><strong>2.Method Overriding</strong></li>
+</ul>
+
+<hr>
+
+<h3>1️.Method Overloading</h3>
+
+<p>
+Compile-time polymorphism occurs when multiple methods in the same class
+have the <strong>same name but different parameters</strong>.
+</p>
+
+<p>
+<strong>Note:</strong> Python does not support traditional method overloading like Java or C++.
+Instead, you can achieve it using <strong>default arguments</strong> or variable-length arguments.
+<ul>
+  <li>Default arguments</li>
+  <li>Variable-length arguments (<code>*args</code>)</li>
+</ul>
+<h3>Purpose of Method Overloading:</h3>
+
+<ul>
+  <li>Allows one method to perform multiple tasks depending on arguments</li>
+  <li>Reduces the number of method names</li>
+  <li>Improves code readability and maintainability</li>
+</ul>
+</p>
+
+<pre><code>
+class Calculator:
+    def add(self, a, b, c=0):
+        return a + b + c
+
+calc = Calculator()
+print(calc.add(10, 20))      # Output: 30
+print(calc.add(10, 20, 30))  # Output: 60
+</code></pre>
+
+<p>
+✔ Here, the <code>add</code> method works for two or three numbers.
+</p>
+
+<hr>
+
+<h3>2️.Method Overriding</h3>
+
+<p>
+Run-time polymorphism occurs when a child class provides a new implementation
+of a method that is already defined in the parent class.
+    
+<h3>Purpose of Method Overriding:</h3>
+<ul>
+  <li>Allows child class to provide specific behavior for a method</li>
+  <li>Supports runtime polymorphism</li>
+  <li>Enhances code flexibility and reusability</li>
+</ul>
 
 
+</p>
 
+<pre><code>
+class Animal:
+    def sound(self):
+        print("Some generic sound")
 
+class Dog(Animal):
+    def sound(self):
+        print("Bark")
 
+class Cat(Animal):
+    def sound(self):
+        print("Meow")
 
+a = Animal()
+d = Dog()
+c = Cat()
 
+a.sound()  # Some generic sound
+d.sound()  # Bark
+c.sound()  # Meow
+</code></pre>
 
+<h2>Comparison Table: Method Overloading vs Method Overriding</h2>
+
+<table border="1" cellpadding="8">
+  <tr>
+    <th>Feature</th>
+    <th>Method Overloading</th>
+    <th>Method Overriding</th>
+  </tr>
+  <tr>
+    <td>Definition</td>
+    <td>Same method name, different parameters in the same class</td>
+    <td>Child class provides a new implementation of a parent method</td>
+  </tr>
+  <tr>
+    <td>Classes Involved</td>
+    <td>Single class</td>
+    <td>At least two classes (parent & child)</td>
+  </tr>
+  <tr>
+    <td>Parameters</td>
+    <td>Different parameters (number or type)</td>
+    <td>Same parameters</td>
+</tr>
+  <tr>
+    <td>Polymorphism Type</td>
+    <td>Compile-time / Static</td>
+    <td>Run-time / Dynamic</td>
+  </tr>
+  <tr>
+    <td>Purpose</td>
+    <td>To perform multiple tasks using the same method name</td>
+    <td>To customize parent method behavior in the child class</td>
+  </tr>
+  <tr>
+    <td>Example</td>
+    <td>def add(a, b=0, c=0)</td>
+    <td>Child class overrides sound() of parent class</td>
+  </tr>
+</table>
+
+<h3>Polymorphism with Functions</h3>
+
+<p>
+Polymorphism allows functions to handle different types of inputs gracefully.
+</p>
+
+<pre><code>
+def add(a, b):
+    return a + b
+
+print(add(10, 20))       # 30 (integers)
+print(add("Hello", "World")) # HelloWorld (strings)
+print(add([1,2], [3,4])) # [1,2,3,4] (lists)
+</code></pre>
+
+<hr>
+
+<h3>Polymorphism with Operators</h3>
+
+<p>
+Operators in Python also exhibit polymorphism. The same operator works differently
+depending on the data type.
+</p>
+
+<ul>
+  <li><code>+</code> → Adds integers, concatenates strings, merges lists</li>
+  <li><code>*</code> → Multiplies numbers, repeats strings or lists</li>
+</ul>
+
+<pre><code>
+print(10 + 20)       # 30 (numbers)
+print("Hi " * 3)     # Hi Hi Hi  (string repetition)
+print([1]*3)         # [1, 1, 1] (list repetition)
+</code></pre>
+
+<hr>
+
+<h3>Advantages of Polymorphism</h3>
+
+<ul>
+  <li>Enhances flexibility of code</li>
+  <li>Supports reusability of methods and functions</li>
+  <li>Reduces the need for multiple function names</li>
+  <li>Helps implement real-world relationships</li>
+  <li>Improves maintainability and readability</li>
+</ul>
+
+<h1>Abstraction in Python</h1>
+
+<p>
+<strong>Abstraction</strong> is one of the key principles of 
+<strong>Object-Oriented Programming (OOP)</strong>.  
+It allows you to hide the **internal implementation details** of a class and show only the **essential features** to the user.
+</p>
+
+<hr>
+
+<h2>Why Use Abstraction?</h2>
+
+<ul>
+  <li>To hide unnecessary details from the user</li>
+  <li>To show only essential functionalities</li>
+  <li>To reduce complexity of code</li>
+  <li>To improve code readability and maintainability</li>
+  <li>Supports security by preventing direct access to implementation</li>
+</ul>
+
+<hr>
+
+<h2>How Abstraction is Achieved in Python?</h2>
+
+<p>
+Python provides abstraction in two ways:
+</p>
+
+<ul>
+  <li><strong>1. Using Abstract Classes</strong></li>
+  <li><strong>2. Using Interfaces (via abstract base class)</strong></li>
+</ul>
+
+<p>
+In Python, the <code>abc</code> module is used to create abstract classes.
+An abstract class may contain one or more abstract methods.
+</p>
+
+<hr>
+
+<h2>Abstract Class and Abstract Method</h2>
+
+<p>
+- An <strong>abstract class</strong> cannot be instantiated.  
+- It provides a blueprint for child classes.  
+- An <strong>abstract method</strong> is a method declared in an abstract class that **must be implemented** by its child class.
+</p>
+
+<h3>Example of Abstraction using Abstract Class:</h3>
+
+<pre><code>
+from abc import ABC, abstractmethod
+
+# Abstract class
+class Vehicle(ABC):
+    
+    @abstractmethod
+    def start(self):
+        pass
+
+    @abstractmethod
+    def stop(self):
+        pass
+
+# Child class implementing abstract methods
+class Car(Vehicle):
+    
+    def start(self):
+        print("Car started")
+    
+    def stop(self):
+        print("Car stopped")
+
+# Object of child class
+c = Car()
+c.start()  # Car started
+c.stop()   # Car stopped
+</code></pre>
+
+<h2>Key Points of Abstraction</h2>
+
+<ul>
+  <li>Abstract classes cannot be instantiated directly</li>
+  <li>Child classes must implement all abstract methods</li>
+  <li>Abstract classes can also contain normal methods with implementation</li>
+  <li>Helps in designing large-scale applications with clean architecture</li>
+</ul>
+
+<hr>
+
+<h2>Advantages of Abstraction</h2>
+
+<ul>
+  <li>Hides unnecessary details from the user</li>
+  <li>Increases security and prevents misuse of methods</li>
+  <li>Makes code more modular and reusable</li>
+  <li>Supports flexibility and easier maintenance</li>
+  <li>Helps implement real-world systems efficiently</li>
+</ul>
+<h1>4.Production Python</h1>
+<h2>Multithreading and Multiprocessing</h2>
+
+<p>
+In production environments, Python applications must handle
+multiple tasks efficiently. Multithreading and multiprocessing
+are used to improve performance and responsiveness.
+</p>
+
+<hr>
+
+<h2> Why Concurrency is Important in Production</h2>
+
+<ul>
+  <li>Handles multiple user requests simultaneously</li>
+  <li>Improves application performance</li>
+  <li>Efficient resource utilization</li>
+</ul>
+
+<hr>
+
+<h2>1. Multithreading in Production</h2>
+
+<p>
+Multithreading allows multiple threads to run within the same process.
+Threads share memory and are suitable for <strong>I/O-bound tasks</strong>.
+</p>
+
+<h3>Common Use Cases:</h3>
+<ul>
+  <li>File handling</li>
+  <li>Network requests</li>
+  <li>Database operations</li>
+</ul>
+
+<h3>Example:</h3>
+
+<pre><code>
+import threading
+
+def handle_request():
+    print("Handling request")
+
+threads = []
+for i in range(3):
+    t = threading.Thread(target=handle_request)
+    threads.append(t)
+    t.start()
+
+for t in threads:
+    t.join()
+</code></pre>
+
+<hr>
+
+<h2>2. Multiprocessing in Production</h2>
+
+<p>
+Multiprocessing uses multiple processes, each with its own memory space.
+It is ideal for <strong>CPU-bound tasks</strong>.
+</p>
+
+<h3>Common Use Cases:</h3>
+<ul>
+  <li>Data processing</li>
+  <li>Image processing</li>
+  <li>Scientific computations</li>
+</ul>
+
+<h3>Example:</h3>
+
+<pre><code>
+import multiprocessing
+
+def process_task():
+    print("Processing data")
+
+processes = []
+for i in range(3):
+    p = multiprocessing.Process(target=process_task)
+    processes.append(p)
+    p.start()
+
+for p in processes:
+    p.join()
+</code></pre>
+
+<hr>
+
+<h2> Multithreading vs Multiprocessing</h2>
+
+<table border="1" cellpadding="8">
+  <tr>
+    <th>Multithreading</th>
+    <th>Multiprocessing</th>
+  </tr>
+  <tr>
+    <td>Uses threads</td>
+    <td>Uses processes</td>
+  </tr>
+  <tr>
+    <td>Shared memory</td>
+    <td>Separate memory</td>
+  </tr>
+  <tr>
+    <td>Best for I/O-bound tasks</td>
+    <td>Best for CPU-bound tasks</td>
+  </tr>
+  <tr>
+    <td>Lower memory usage</td>
+    <td>Higher memory usage</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2> Best Practices in Production</h2>
+
+<ul>
+  <li>Use threading for I/O-heavy operations</li>
+  <li>Use multiprocessing for heavy computations</li>
+  <li>Avoid race conditions using locks</li>
+  <li>Monitor performance and resource usage</li>
+</ul>
 
 
 
