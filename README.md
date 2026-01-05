@@ -2279,6 +2279,801 @@ def student(name, age):
 student(age=20, name="Pavani")
 </pre>
 
+<h2>Local and Global Variables in Python</h2>
+
+<p>
+Variables in Python are classified based on where they are declared
+and how they are accessed.
+</p>
+
+<hr>
+
+<h3>1. Local Variable</h3>
+
+<p>
+A <b>local variable</b> is a variable that is declared inside a function.
+It can be accessed only within that function.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+def show():
+    x = 10   # local variable
+    print(x)
+
+show()
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+10
+</pre>
+
+<hr>
+
+<h3>2. Global Variable</h3>
+
+<p>
+A <b>global variable</b> is a variable that is declared outside all functions.
+It can be accessed anywhere in the program.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+y = 20   # global variable
+
+def display():
+    print(y)
+
+display()
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+20
+</pre>
+
+<hr>
+
+<h2>Differences Between Local and Global Variables</h3>
+
+<table>
+  <tr>
+    <th>Local Variable</th>
+    <th>Global Variable</th>
+  </tr>
+  <tr>
+    <td>Declared inside a function</td>
+    <td>Declared outside a function</td>
+  </tr>
+  <tr>
+    <td>Accessible only within the function</td>
+    <td>Accessible throughout the program</td>
+  </tr>
+  <tr>
+    <td>Created when function is called</td>
+    <td>Created when program starts</td>
+  </tr>
+  <tr>
+    <td>Destroyed after function execution</td>
+    <td>Exists until program ends</td>
+  </tr>
+</table>
+
+<h2>return Statement in Python</h2>
+<p>
+The <b>return</b> statement is used inside a function to send a value
+back to the caller. Once <b>return</b> is executed, the function stops
+its execution.
+</p>
+
+<hr>
+
+<h3>Syntax</h3>
+
+<pre>
+return value
+</pre>
+
+<hr>
+
+<h3>Simple Example</h3>
+
+<pre>
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+8
+</pre>
+
+<h2>Modularization Using Functions in Python</h2>
+
+<p>
+<b>Modularization</b> means dividing a large program into smaller,
+independent, and manageable parts called <b>modules</b> or <b>functions</b>.
+Each function performs a specific task.
+</p>
+
+<hr>
+
+<h3>Why Modularization?</h3>
+
+<ul>
+  <li>Makes code easier to understand</li>
+  <li>Improves code reusability</li>
+  <li>Easy to debug and maintain</li>
+  <li>Reduces code complexity</li>
+</ul>
+
+<hr>
+
+<h3> Example of Modularization</h3>
+
+<p>
+Instead of writing all logic in one place, we divide the program
+into multiple functions.
+</p>
+
+<pre>
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+result1 = add(10, 5)
+result2 = subtract(10, 5)
+result3 = multiply(10, 5)
+
+print(result1)
+print(result2)
+print(result3)
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+15
+5
+50
+</pre>
+
+<h2>*args and **kwargs in Python</h2>
+
+<p>
+<b>*args</b> and <b>**kwargs</b> are used in functions to pass a variable
+number of arguments.
+</p>
+
+<hr>
+
+<h3>1. *args (Non-Keyword Arguments)</h3>
+
+<p>
+<b>*args</b> allows a function to accept multiple positional arguments.
+The arguments are stored as a tuple.
+</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+def function_name(*args):
+    statement
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+def add_numbers(*args):
+    total = 0
+    for i in args:
+        total += i
+    return total
+
+print(add_numbers(10, 20, 30))
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+60
+</pre>
+
+<hr>
+
+<h3>2. **kwargs (Keyword Arguments)</h3>
+
+<p>
+<b>**kwargs</b> allows a function to accept multiple keyword arguments.
+The arguments are stored as a dictionary.
+</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+def function_name(**kwargs):
+    statement
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+def show_details(**kwargs):
+    for key, value in kwargs.items():
+        print(key, ":", value)
+
+show_details(name="Pavani", age=22)
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+name : Pavani
+age : 22
+</pre>
+
+<h1>Lambda Functions in Python</h1>
+
+<p>
+A <b>lambda function</b> is a small anonymous function written in a single line.
+It can take any number of arguments but only one expression.
+</p>
+
+<hr>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+lambda arguments: expression
+</pre>
+
+<hr>
+
+<p><b>Example:</b></p>
+
+<pre>
+square = lambda x: x * x
+print(square(5))
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+25
+</pre>
+
+<hr>
+
+<h4>Key Points</h4>
+
+<ul>
+  <li>No function name is required</li>
+  <li>Written in a single line</li>
+  <li>Returns value automatically</li>
+  <li>Used for short operations</li>
+</ul>
+
+<h2>map(), filter(), and reduce() in Python</h2>
+
+<p>
+The functions <b>map</b>, <b>filter</b>, and <b>reduce</b> are used to perform
+operations on collections like lists in a clean and efficient way.
+</p>
+
+<hr>
+
+<h3>1. map()</h3>
+
+<p><b>Purpose:</b></p>
+<p>
+<b>map()</b> is used to <b>apply the same operation to every element</b>
+in an iterable and return the modified elements.
+</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+map(function, iterable)
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+numbers = [1, 2, 3, 4]
+
+result = map(lambda x: x * 2, numbers)
+print(list(result))
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+[2, 4, 6, 8]
+</pre>
+
+<hr>
+
+<h3>2. filter()</h3>
+
+<p><b>Purpose:</b></p>
+<p>
+<b>filter()</b> is used to <b>select elements</b> from an iterable
+that satisfy a specific condition.
+</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+filter(function, iterable)
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+numbers = [1, 2, 3, 4, 5, 6]
+
+result = filter(lambda x: x % 2 == 0, numbers)
+print(list(result))
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+[2, 4, 6]
+</pre>
+
+<hr>
+
+<h3>3. reduce()</h3>
+
+<p><b>Purpose:</b></p>
+<p>
+<b>reduce()</b> is used to <b>combine all elements</b> of an iterable
+into a <b>single value</b>.
+</p>
+
+<p><b>Note:</b> <b>reduce()</b> must be imported from the <b>functools</b> module.</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+reduce(function, iterable)
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+from functools import reduce
+
+numbers = [1, 2, 3, 4]
+
+result = reduce(lambda x, y: x + y, numbers)
+print(result)
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+10
+</pre>
+
+<h1>Recursion in Python</h2>
+
+<p>
+<b>Recursion</b> is a technique in which a function calls itself
+to solve a problem by breaking it into smaller subproblems.
+</p>
+
+<hr>
+
+<h3>Purpose of Recursion</h3>
+
+<ul>
+  <li>Solve problems that can be divided into smaller similar problems</li>
+  <li>Useful for mathematical calculations</li>
+  <li>Simplifies code for complex logic</li>
+</ul>
+
+<hr>
+
+<h3>Syntax of Recursive Function</h3>
+
+<pre>
+def function_name():
+    if base_condition:
+        return value
+    return function_name()
+</pre>
+
+<hr>
+
+<h3> Example (Factorial)</h3>
+
+<pre>
+def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+120
+</pre>
+
+<hr>
+
+<h3>Key Points</h3>
+
+<ul>
+  <li>A recursive function must have a <b>base condition</b></li>
+  <li>Without base condition, recursion leads to infinite calls</li>
+  <li>Each function call uses memory (stack)</li>
+  <li>Recursion can be replaced with loops in many cases</li>
+</ul>
+
+<hr>
+
+<h3>When to Use Recursion?</h3>
+
+<ul>
+  <li>Tree and graph traversal</li>
+  <li>Factorial, Fibonacci series</li>
+  <li>Divide and conquer problems</li>
+</ul>
+<h1>Comprehensions in Python</h1>
+
+<p>
+<b>Comprehensions</b> provide a short and readable way to create collections
+such as lists, sets, and dictionaries in Python.
+</p>
+
+<hr>
+
+<h3>Purpose of Comprehensions</h3>
+
+<ul>
+  <li>Write clean and concise code</li>
+  <li>Improve readability</li>
+  <li>Replace long loops</li>
+  <li>Efficient data processing</li>
+</ul>
+
+<hr>
+
+<h3>Types of Comprehensions</h3>
+
+<ul>
+  <li>1.List Comprehension</li>
+  <li>2.Set Comprehension</li>
+  <li>3.Dictionary Comprehension</li>
+</ul>
+
+<hr>
+
+<h3>1. List Comprehension</h3>
+
+<p><b>Purpose:</b> Used to create a new list by applying an expression to each item.</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+[expression for item in iterable if condition]
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+numbers = [1, 2, 3, 4, 5]
+
+squares = [n * n for n in numbers]
+print(squares)
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+[1, 4, 9, 16, 25]
+</pre>
+
+<hr>
+
+<h3>2. Set Comprehension</h3>
+
+<p><b>Purpose:</b> Used to create a set with unique values.</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+{expression for item in iterable if condition}
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+numbers = [1, 2, 2, 3, 4, 4]
+
+unique_numbers = {n for n in numbers}
+print(unique_numbers)
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+{1, 2, 3, 4}
+</pre>
+
+<hr>
+
+<h3>3. Dictionary Comprehension</h3>
+
+<p><b>Purpose:</b> Used to create a dictionary from an iterable.</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+{key: value for item in iterable if condition}
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+numbers = [1, 2, 3, 4]
+
+squares = {n: n * n for n in numbers}
+print(squares)
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+{1: 1, 2: 4, 3: 9, 4: 16}
+</pre>
+
+<h1>File Handling in Python</h1>
+
+<p>
+<b>File handling</b> in Python is used to create, read, write, and append data
+to files stored on the system.
+File handling in Python refers to the process of creating, reading,
+writing, and updating files stored on a computer.
+It allows programs to store data permanently instead of keeping it only
+in memory.
+</p>
+
+<hr>
+
+<h3>Purpose of File Handling</h3>
+
+<ul>
+  <li>Store data permanently</li>
+  <li>Read data from files</li>
+  <li>Update or append file content</li>
+  <li>Handle large data efficiently</li>
+</ul>
+
+<h2>Opening a File in Python</h2>
+
+<p>
+Opening a file means making the file available to the program
+so that data can be read from or written to it.
+Python uses the <b>open()</b> function to open files.
+</p>
+
+<hr>
+
+<h3>Syntax</h3>
+
+<pre>
+file_object = open("filename", "mode")
+</pre>
+
+
+<hr>
+
+<h3>File Modes</h3>
+
+<ul>
+  <li><b>r</b> → Read (default)</li>
+  <li><b>w</b> → Write (overwrites file)</li>
+  <li><b>a</b> → Append</li>
+  <li><b>x</b> → Create new file</li>
+</ul>
+
+<hr>
+
+<h3>1. Writing to a File</h3>
+
+<p><b>Example:</b></p>
+
+<pre>
+file = open("data.txt", "w")
+file.write("Hello Python")
+file.close()
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+data.txt file created with content: Hello Python
+</pre>
+
+<hr>
+
+<h3>2. Reading from a File</h3>
+
+<p><b>Example:</b></p>
+
+<pre>
+file = open("data.txt", "r")
+content = file.read()
+print(content)
+file.close()
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+Hello Python
+</pre>
+
+<hr>
+
+<h3>3. Appending to a File</h3>
+
+<p><b>Example:</b></p>
+
+<pre>
+file = open("data.txt", "a")
+file.write("\nWelcome")
+file.close()
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+File updated with new content
+</pre>
+
+<hr>
+
+<h3>Using with Statement</h3>
+
+<p>
+The <b>with</b> statement automatically closes the file after use.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+with open("data.txt", "r") as file:
+    print(file.read())
+</pre>
+
+<h2>dump(), load(), dumps(), and loads() in Python</h2>
+
+<p>
+These functions are used in <b>serialization</b> and <b>deserialization</b>.
+Serialization means converting Python objects into a byte format,
+and deserialization means converting them back into Python objects.
+</p>
+
+<hr>
+
+<h3>1. dump()</h3>
+
+<p><b>Purpose:</b></p>
+<p>
+<b>dump()</b> is used to write (save) Python objects into a file
+in serialized form.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+import pickle
+
+data = [1, 2, 3, 4]
+
+file = open("data.pkl", "wb")
+pickle.dump(data, file)
+file.close()
+</pre>
+
+<hr>
+
+<h3>2. load()</h3>
+
+<p><b>Purpose:</b></p>
+<p>
+<b>load()</b> is used to read (retrieve) Python objects from a file
+and convert them back to original form.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+import pickle
+
+file = open("data.pkl", "rb")
+data = pickle.load(file)
+file.close()
+
+print(data)
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+[1, 2, 3, 4]
+</pre>
+
+<hr>
+
+<h3>3. dumps()</h3>
+
+<p><b>Purpose:</b></p>
+<p>
+<b>dumps()</b> converts a Python object into a byte string
+without saving it to a file.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+import pickle
+
+data = {"name": "Pavani", "age": 22}
+
+byte_data = pickle.dumps(data)
+print(byte_data)
+</pre>
+
+<hr>
+
+<h3>4. loads()</h3>
+
+<p><b>Purpose:</b></p>
+<p>
+<b>loads()</b> converts a byte string back into a Python object.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+import pickle
+
+data = pickle.loads(byte_data)
+print(data)
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+{'name': 'Pavani', 'age': 22}
+</pre>
+
+
+
+
+
 
 
 
