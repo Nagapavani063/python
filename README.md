@@ -2155,6 +2155,130 @@ for i in range(3):
     print(i)
 </pre>
 
+<h1>Functions in Python</h1>
+
+<p>
+A function in Python is a block of reusable code that performs a specific task.
+Functions help make programs modular, readable, and easy to maintain.
+</p>
+
+<hr>
+
+<h3>Why Use Functions?</h3>
+
+<ul>
+  <li>Code reusability</li>
+  <li>Improves readability</li>
+  <li>Reduces code duplication</li>
+  <li>Makes debugging easier</li>
+</ul>
+
+<hr>
+
+<h3>Syntax of a Function</h3>
+
+<pre>
+def function_name(parameters):
+    statement
+    return value
+</pre>
+<h3>Function Example</h3>
+
+<p>
+This function takes two numbers and prints their sum.
+</p>
+
+<pre>
+def add(a, b):
+    print(a + b)
+
+add(5, 3)
+</pre>
+
+<p><b>Output:</b></p>
+
+<pre>
+8
+</pre>
+<hr>
+
+<h3>1. Function Without Parameters</h3>
+
+<p><b>Example:</b></p>
+
+<pre>
+def greet():
+    print("Welcome to Python")
+
+greet()
+</pre>
+
+<hr>
+
+<h3>2. Function With Parameters</h3>
+
+<p><b>Example:</b></p>
+
+<pre>
+def add(a, b):
+    print(a + b)
+
+add(10, 20)
+</pre>
+
+<hr>
+
+<h3>3. Function With Return Statement</h3>
+
+<p>
+The <b>return</b> statement sends a value back to the caller.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+def square(num):
+    return num * num
+
+result = square(4)
+print(result)
+</pre>
+
+<hr>
+
+<h3>4. Default Parameter Function</h3>
+
+<p>
+Default parameters allow a function to use a default value if no argument is provided.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+def greet(name="User"):
+    print("Hello", name)
+
+greet()
+greet("Pavani")
+</pre>
+
+<hr>
+
+<h3>5. Keyword Arguments</h3>
+
+<p>
+Arguments can be passed using parameter names.
+</p>
+
+<p><b>Example:</b></p>
+
+<pre>
+def student(name, age):
+    print(name, age)
+
+student(age=20, name="Pavani")
+</pre>
+
 
 
 
