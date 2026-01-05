@@ -3070,6 +3070,748 @@ print(data)
 {'name': 'Pavani', 'age': 22}
 </pre>
 
+<h1>3.Advanced Python Programming</h1>
+
+<p>
+Advanced Python focuses on powerful concepts that help developers write
+<strong>efficient, reusable, scalable, and professional-level code</strong>.
+It is used in real-world applications such as web development, data science,
+automation, machine learning, and software engineering.
+</p>
+<h3>Why Use Advanced Python?</h3>
+
+<p>
+Advanced Python is used to develop <strong>efficient, scalable, and real-world applications</strong>.
+It helps programmers write clean, optimized, and professional-quality code.
+</p>
+
+<hr>
+
+<h3>Advantages of Advanced Python</h3>
+
+<h3>1️.High Performance</h3>
+<p>
+Advanced Python concepts such as generators and multithreading improve program
+performance and reduce memory usage.
+</p>
+
+<h3>2️.Code Reusability</h3>
+<p>
+Using classes, functions, and modules allows developers to reuse code,
+saving time and effort.
+</p>
+
+<h3>3️.Better Error Handling</h3>
+<p>
+Exception handling prevents program crashes and improves application reliability.
+</p>
+
+<h3>4️.Clean and Readable Code</h3>
+<p>
+Advanced features like decorators, lambda functions, and comprehensions
+make code short and easy to understand.
+</p>
+
+<h3>5️.Support for Large Applications</h3>
+<p>
+Advanced Python helps manage large projects by organizing code into
+modules and packages.
+</p>
+<h2>Example of Advanced Python</h2>
+
+<p>
+Below example shows the use of a <strong>decorator</strong> to enhance a function
+without changing its original code.
+</p>
+
+<pre><code>
+def my_decorator(func):
+    def wrapper():
+        print("Before function execution")
+        func()
+        print("After function execution")
+    return wrapper
+
+@my_decorator
+def greet():
+    print("Hello, Advanced Python!")
+
+greet()
+</code></pre>
+
+<p><strong>Output:</strong></p>
+<pre><code>
+Before function execution
+Hello, Advanced Python!
+After function execution
+</code></pre>
+
+<h1>Exception Handling in Python</h1>
+
+<p>
+Python provides several blocks to handle runtime errors using
+<strong>exception handling</strong>. These blocks help prevent program crashes
+and allow smooth execution.
+</p>
+
+<hr>
+
+<h2>1.try – except</h2>
+
+<p>
+The <strong>try</strong> block contains code that may raise an exception.
+The <strong>except</strong> block handles the error if it occurs.
+</p>
+<pre><code>
+try:
+    a = 10
+    b = 0
+    print(a / b)
+except ZeroDivisionError:
+    print("Division by zero is not allowed")
+</code></pre>
+
+<p><strong>Output:</strong></p>
+<pre><code>
+Division by zero is not allowed
+</code></pre>
+
+<hr>
+
+<h2>2.try – except – else</h2>
+
+<p>
+The <strong>else</strong> block executes only when no exception occurs
+inside the try block.
+</p>
+<pre><code>
+try:
+    num = int(input("Enter a number: "))
+except ValueError:
+    print("Invalid input")
+else:
+    print("You entered:", num)
+</code></pre>
+
+<hr>
+
+<h2>3.try – except – finally</h2>
+
+<p>
+The <strong>finally</strong> block always executes, whether an exception
+occurs or not. It is mainly used for cleanup operations.
+</p>
+
+<pre><code>
+try:
+    file = open("data.txt", "r")
+    print(file.read())
+except FileNotFoundError:
+    print("File not found")
+finally:
+    print("File closed successfully")
+</code></pre>
+
+<h1>Common Errors in Python</h1>
+
+<p>
+Python errors occur when the program cannot be executed correctly.
+Understanding these errors helps in debugging and writing reliable code.
+</p>
+
+<hr>
+
+<h2>1. SyntaxError</h2>
+
+<p>
+<strong>SyntaxError</strong> occurs when Python code does not follow
+proper syntax rules.
+</p>
+
+<p><strong>Purpose:</strong> Indicates incorrect structure of code.</p>
+
+<pre><code>
+# Example
+print("Hello"
+</code></pre>
+
+<p><strong>Error:</strong> SyntaxError: unexpected EOF while parsing</p>
+
+<hr>
+
+<h2>2. NameError</h2>
+
+<p>
+<strong>NameError</strong> occurs when a variable or function name
+is not defined.
+</p>
+
+<p><strong>Purpose:</strong> Indicates usage of undeclared variables.</p>
+
+<pre><code>
+# Example
+print(x)
+</code></pre>
+
+<p><strong>Error:</strong> NameError: name 'x' is not defined</p>
+
+<hr>
+
+<h2>3. ValueError</h2>
+
+<p>
+<strong>ValueError</strong> occurs when a function receives a correct type
+but an invalid value.
+</p>
+
+<p><strong>Purpose:</strong> Indicates incorrect value usage.</p>
+
+<pre><code>
+# Example
+num = int("abc")
+</code></pre>
+
+<p><strong>Error:</strong> ValueError: invalid literal for int()</p>
+
+<hr>
+
+<h2>4. TypeError</h2>
+
+<p>
+<strong>TypeError</strong> occurs when an operation is applied to
+incompatible data types.
+</p>
+
+<p><strong>Purpose:</strong> Indicates type mismatch.</p>
+
+<pre><code>
+# Example
+result = "10" + 5
+</code></pre>
+
+<p><strong>Error:</strong> TypeError: can only concatenate str (not "int")</p>
+
+<hr>
+
+<h2>5. IndentationError</h2>
+
+<p>
+<strong>IndentationError</strong> occurs when indentation is incorrect.
+Python uses indentation to define blocks.
+</p>
+
+<p><strong>Purpose:</strong> Enforces proper code structure.</p>
+
+<pre><code>
+# Example
+if True:
+print("Hello")
+</code></pre>
+
+<p><strong>Error:</strong> IndentationError: expected an indented block</p>
+
+<h2>6. FileNotFoundError</h2>
+
+<p>
+<strong>FileNotFoundError</strong> occurs when trying to open a file
+that does not exist.
+</p>
+
+<p><strong>Purpose:</strong> Prevents file access issues.</p>
+
+<pre><code>
+# Example
+file = open("data.txt", "r")
+</code></pre>
+
+<p><strong>Error:</strong> FileNotFoundError: No such file or directory</p>
+
+<hr>
+
+<h2>7. ZeroDivisionError</h2>
+
+<p>
+<strong>ZeroDivisionError</strong> occurs when dividing a number by zero.
+</p>
+
+<p><strong>Purpose:</strong> Prevents invalid arithmetic operations.</p>
+
+<pre><code>
+# Example
+print(10 / 0)
+</code></pre>
+
+<p><strong>Error:</strong> ZeroDivisionError: division by zero</p>
+
+<h1>Object-Oriented Programming (OOP) in Python</h1>
+
+<p>
+Object-Oriented Programming (OOP) is a programming paradigm that organizes code
+using <strong>classes</strong> and <strong>objects</strong>.
+Python fully supports OOP concepts, making programs more structured,
+reusable, and easy to maintain.
+</p>
+
+<hr>
+
+<h2>Why Use OOP in Python?</h2>
+
+<ul>
+  <li>Improves code reusability</li>
+  <li>Makes programs easier to understand</li>
+  <li>Supports large and complex applications</li>
+  <li>Enhances security and reliability</li>
+  <li>Models real-world problems easily</li>
+</ul>
+
+<hr>
+
+<h2>Basic OOP Terms</h2>
+
+<h21.>Class</h3>
+<p>
+A <strong>class</strong> is a blueprint or template used to create objects.
+</p>
+
+<h2>2.Object</h3>
+<p>
+An <strong>object</strong> is an instance of a class. It represents a real-world entity.
+</p>
+
+<hr>
+
+<h3>Creating a Class and Object</h2>
+
+<pre><code>
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+
+s1 = Student("Pavani", 22)
+s1.display()
+</code></pre>
+
+<hr>
+
+<h2>3.Constructor (__init__)</h2>
+<p>
+A <strong>constructor</strong> is a special method in Python used to
+<strong>initialize object data</strong>.  
+In Python, the constructor method is named <code>__init__()</code>.
+It is automatically called when an object is created.
+</p>
+
+<pre><code>
+def __init__(self):
+    pass
+</code></pre>
+
+<hr>
+
+<h2>Types of Constructors in Python</h2>
+
+<ul>
+  <li>1.Default Constructor</li>
+  <li>2.Parameterized Constructor</li>
+  <li>3.Non-Parameterized Constructor</li>
+</ul>
+
+<hr>
+
+<h3>1. Default Constructor</h3>
+
+<p>
+A <strong>default constructor</strong> is a constructor that does not take
+any arguments except <code>self</code>.  
+It initializes default values.
+</p>
+
+<pre><code>
+class Student:
+    def __init__(self):
+        self.name = "Pavani"
+        self.age = 22
+
+    def display(self):
+        print(self.name, self.age)
+
+s = Student()
+s.display()
+</code></pre>
+
+<hr>
+
+<h3>2. Parameterized Constructor</h3>
+
+<p>
+A <strong>parameterized constructor</strong> accepts parameters
+and initializes instance variables with user-provided values.
+</p>
+
+<pre><code>
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display(self):
+        print(self.name, self.age)
+
+s1 = Student("Pavani", 22)
+s2 = Student("Ravi", 23)
+
+s1.display()
+s2.display()
+</code></pre>
+
+<hr>
+
+<h3>3. Non-Parameterized Constructor</h3>
+
+<p>
+A <strong>non-parameterized constructor</strong> is similar to a default
+constructor and does not receive any values from the user.
+</p>
+
+<pre><code>
+class Demo:
+    def __init__(self):
+        print("Non-parameterized constructor called")
+
+d = Demo()
+</code></pre>
+
+<hr>
+
+<h3>Example: With Constructor</h3>
+
+<p>
+In this example, data is initialized automatically using a constructor.
+</p>
+
+<pre><code>
+class Employee:
+    def __init__(self, emp_id, salary):
+        self.emp_id = emp_id
+        self.salary = salary
+
+    def show(self):
+        print("ID:", self.emp_id)
+        print("Salary:", self.salary)
+
+e = Employee(101, 50000)
+e.show()
+</code></pre>
+
+<p>
+✔ Data is initialized automatically when the object is created.
+</p>
+
+<hr>
+
+<h3>Example: Without Constructor</h3>
+
+<p>
+In this example, data is assigned manually using a separate method
+instead of a constructor.
+</p>
+
+<pre><code>
+class Employee:
+    def set_data(self, emp_id, salary):
+        self.emp_id = emp_id
+        self.salary = salary
+
+    def show(self):
+        print("ID:", self.emp_id)
+        print("Salary:", self.salary)
+
+e = Employee()
+e.set_data(101, 50000)
+e.show()
+</code></pre>
+<h2>4.self in Python </h2>
+
+<p>
+In Python, <strong>self</strong> refers to the <strong>current object</strong>.
+It is used to access and store instance variables and methods that belong
+to that object.
+</p>
+
+<hr>
+
+<h3>Purpose of <code>self</code></h3>
+
+<ul>
+  <li>Refers to the current object</li>
+  <li>Stores data specific to an object</li>
+</ul>
+<hr>
+
+<h3>Example Using <code>self</code></h3>
+
+<pre><code>
+class Student:
+    def set_data(self, name):
+        self.name = name   # instance variable
+
+    def show_data(self):
+        print("Name:", self.name)
+
+s1 = Student()
+s1.set_data("Pavani")
+s1.show_data()
+</code></pre>
+
+<hr>
+<h1>Inheritance in Python</h1>
+
+<p>
+<strong>Inheritance</strong> is an Object-Oriented Programming (OOP) concept
+that allows a child class to acquire the properties and methods
+of a parent class. It promotes code reusability and logical structure.
+</p>
+
+<hr>
+
+<h2>Why Use Inheritance?</h2>
+
+<ul>
+  <li>Reusability of code</li>
+  <li>Reduces code duplication</li>
+  <li>Improves readability</li>
+  <li>Supports method overriding</li>
+  <li>Models real-world relationships</li>
+</ul>
+
+<hr>
+
+<h2>Basic Syntax of Inheritance</h2>
+
+<pre><code>
+class Parent:
+    # parent class code
+
+class Child(Parent):
+    # child class code
+</code></pre>
+
+<hr>
+
+<h2>Example of Inheritance</h2>
+
+<pre><code>
+class Parent:
+    def show(self):
+        print("This is Parent class")
+
+class Child(Parent):
+    def display(self):
+        print("This is Child class")
+
+c = Child()
+c.show()
+c.display()
+</code></pre>
+
+<hr>
+
+<h2>Types of Inheritance in Python</h2>
+
+<ul>
+  <li>1.Single Inheritance</li>
+  <li>2.Multiple Inheritance</li>
+  <li>3.Multilevel Inheritance</li>
+  <li>4.Hierarchical Inheritance</li>
+  <li>5.Hybrid Inheritance</li>
+</ul>
+
+<hr>
+
+<h3>1. Single Inheritance</h3>
+
+<p>
+Single inheritance means one child class inherits from exactly one parent class.
+It is the simplest form of inheritance and is easy to understand and use.
+
+</p>
+<ul>
+  <li>One parent → one child</li>
+  <li>Promotes code reuse</li>
+  <li>Easy to debug and maintain</li>
+</ul>
+<pre><code>
+class Animal:
+    def eat(self):
+        print("Animal eats")
+
+class Dog(Animal):
+    def bark(self):
+        print("Dog barks")
+
+d = Dog()
+d.eat()
+d.bark()
+</code></pre>
+
+<hr>
+
+<h3>2. Multiple Inheritance</h3>
+
+<p>
+A child class inherits from more than one parent class.
+Multilevel inheritance occurs when a class is derived from another derived class.
+The inheritance chain continues for multiple levels.
+</p>
+
+<ul>
+  <li>Grandparent → Parent → Child</li>
+  <li>Each level adds new features</li>
+  <li>Represents step-by-step hierarchy</li>
+</ul>
+
+<pre><code>
+class Father:
+    def skill1(self):
+        print("Father skill")
+
+class Mother:
+    def skill2(self):
+        print("Mother skill")
+
+class Child(Father, Mother):
+    pass
+
+c = Child()
+c.skill1()
+c.skill2()
+</code></pre>
+
+<hr>
+
+<h3>3. Multilevel Inheritance</h3>
+
+<p>
+Inheritance in multiple levels (grandparent → parent → child).
+Multiple inheritance means a single child class inherits from more than one parent class.
+Python supports multiple inheritance, unlike some other programming languages.
+</p>
+
+<ul>
+  <li>Multiple parents → one child</li>
+  <li>Allows combining features from different classes</li>
+  <li>Requires careful design to avoid ambiguity</li>
+</ul>
+
+<pre><code>
+class GrandParent:
+    def show1(self):
+        print("Grand Parent")
+
+class Parent(GrandParent):
+    def show2(self):
+        print("Parent")
+
+class Child(Parent):
+    def show3(self):
+        print("Child")
+
+c = Child()
+c.show1()
+c.show2()
+c.show3()
+</code></pre>
+
+<hr>
+
+<h3>4. Hierarchical Inheritance</h3>
+
+<p>
+Hierarchical inheritance occurs when multiple child classes inherit
+from the same parent class.
+</p>
+
+<ul>
+  <li>One parent → many children</li>
+  <li>Promotes consistency across child classes</li>
+  <li>Common functionality is shared</li>
+</ul>
+
+<pre><code>
+class Vehicle:
+    def start(self):
+        print("Vehicle started")
+
+class Car(Vehicle):
+    pass
+
+class Bike(Vehicle):
+    pass
+
+c = Car()
+b = Bike()
+c.start()
+b.start()
+</code></pre>
+
+<hr>
+
+<h3>5. Hybrid Inheritance</h3>
+
+<p>
+Hybrid inheritance is a combination of two or more types of inheritance.
+It is commonly used in complex applications.
+</p>
+
+<ul>
+  <li>Combination of single, multiple, or multilevel inheritance</li>
+  <li>Used in large-scale systems</li>
+  <li>Requires proper design planning</li>
+</ul>
+
+<pre><code>
+class A:
+    def showA(self):
+        print("Class A")
+
+class B(A):
+    def showB(self):
+        print("Class B")
+
+class C(A):
+    def showC(self):
+        print("Class C")
+
+class D(B, C):
+    pass
+
+d = D()
+d.showA()
+d.showB()
+d.showC()
+</code></pre>
+
+<h2>Advantages of Inheritance</h2>
+
+<ul>
+  <li>Code reusability</li>
+  <li>Easy maintenance</li>
+  <li>Better organization</li>
+  <li>Supports polymorphism</li>
+</ul>
+
+
+
+
+
+
+
+
 
 
 
