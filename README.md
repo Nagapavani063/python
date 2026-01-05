@@ -1796,6 +1796,373 @@ student_dict = {"name": "Alice", "age": 21}
   </tr>
 </table>
 
+<h1>2.Intermediate Python</h1>
+
+<p>
+Intermediate Python focuses on writing efficient, clean, and reusable code.
+At this level, learners already understand Python basics such as variables,
+loops, data types, and functions.
+</p>
+<h2>What You Learn in Intermediate Python</h2>
+
+<ul>
+  <li>Advanced Functions and Arguments</li>
+  <li>Lambda Functions</li>
+  <li>List, Set, and Dictionary Comprehensions</li>
+  <li>File Handling</li>
+  <li>Exception Handling</li>
+  <li>Modules and Packages</li>
+  <li>Object-Oriented Programming (OOP)</li>
+</ul>
+
+<h2>Why Learn Intermediate Python?</h2>
+
+<ul>
+  <li>Write efficient and reusable code</li>
+  <li>Improve problem-solving skills</li>
+  <li>Prepare for Advanced Python topics</li>
+  <li>Build real-world applications</li>
+</ul>
+
+<h1>Python Control Statements</h1>
+
+<p>
+Control statements in Python are used to control the flow of execution of a program.
+They help make decisions, repeat tasks, and manage program logic effectively.
+</p>
+
+<h3>Types of Control Statements</h3>
+
+<ul>
+  <li>1.Conditional Statements</li>
+  <li>2.Looping Statements</li>
+  <li>3.Jump Statements</li>
+</ul>
+
+<h2>1. Conditional Statements</h2>
+
+<p>
+Conditional statements execute code based on conditions.
+</p>
+
+<hr>
+
+<h3>1. if Statement</h3>
+
+<p>
+The <b>if</b> statement is used to execute a block of code only when a given
+condition is true. If the condition is false, the code inside the <b>if</b>
+block is skipped.
+</p>
+<p><b>Syntax:</b></p>
+
+<pre>
+if condition:
+    statement
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+num = 10
+if num > 0:
+    print("Positive number")
+</pre>
+
+<hr>
+
+<h3>2. if-else Statement</h3>
+
+<p>
+The <b>if-else</b> statement provides two paths of execution.
+If the condition is true, the <b>if</b> block runs.
+If the condition is false, the <b>else</b> block runs.
+</p>
+
+
+<p><b>Syntax:</b></p>
+
+<pre>
+if condition:
+    statement
+else:
+    statement
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+num = 7
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+</pre>
+
+<hr>
+
+<h3>3. if-elif-else Statement</h3>
+
+<p>
+The <b>elif</b> (else if) statement is used to check multiple conditions.
+When one condition becomes true, its block is executed and the rest
+are skipped.
+</p>
+<p><b>Syntax:</b></p>
+
+<pre>
+if condition1:
+    statement
+elif condition2:
+    statement
+else:
+    statement
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+marks = 85
+if marks >= 90:
+    print("Grade A")
+elif marks >= 60:
+    print("Grade B")
+else:
+    print("Grade C")
+</pre>
+
+<h3>4.Nested if Statement</h3>
+
+<p>
+A nested <b>if</b> statement means placing one <b>if</b> condition inside another
+<b>if</b> or <b>else</b> block. It is used when a decision depends on multiple conditions.
+</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+if condition1:
+    if condition2:
+        statement
+    else:
+        statement
+else:
+    statement
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+num = 15
+
+if num > 0:
+    if num % 2 == 0:
+        print("Positive Even number")
+    else:
+        print("Positive Odd number")
+else:
+    print("Negative number")
+</pre>
+
+<h2>2.Looping Statements</h2>
+
+<p>
+Looping statements are used to execute a block of code repeatedly
+as long as a condition is satisfied or for each item in a sequence.
+</p>
+
+<hr>
+
+<h3>Types of Looping Statements</h3>
+
+<ul>
+  <li>1.for loop</li>
+  <li>2.while loop</li>
+  <li>3.nested loops</li>
+</ul>
+
+<hr>
+
+<h3>1. for Loop</h3>
+
+<p>
+The <b>for</b> loop is used to iterate over a sequence such as a list,
+tuple, string, or range.
+</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+for variable in sequence:
+    statement
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+for i in range(1, 6):
+    print(i)
+</pre>
+
+<hr>
+
+<h3>2. while Loop</h3>
+
+<p>
+The <b>while</b> loop executes a block of code as long as the given
+condition is true.
+</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+while condition:
+    statement
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+</pre>
+
+<hr>
+
+<h3>3. Nested Loops</h3>
+
+<p>
+A nested loop is a loop inside another loop.
+The inner loop executes completely for each iteration of the outer loop.
+</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+for variable1 in sequence:
+    for variable2 in sequence:
+        statement
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+for i in range(1, 4):
+    for j in range(1, 3):
+        print(i, j)
+</pre>
+
+<hr>
+
+<h3>Important Loop Control Statements</h3>
+
+<ul>
+  <li><b>break</b> → Terminates the loop</li>
+  <li><b>continue</b> → Skips the current iteration</li>
+  <li><b>pass</b> → Acts as a placeholder</li>
+</ul>
+
+<h2>3.Jumping Statements</h2>
+
+<p>
+Jumping statements are used to change the normal flow of execution
+inside loops or conditional blocks. They help skip, stop, or pass
+control in a program.
+</p>
+
+<hr>
+
+<h3>Types of Jumping Statements</h3>
+
+<ul>
+  <li>1.break</li>
+  <li>2.continue</li>
+  <li>3.pass</li>
+</ul>
+
+<hr>
+
+<h3>1. break Statement</h3>
+
+<p>
+The <b>break</b> statement is used to immediately terminate the loop
+when a specific condition is met.
+</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+break
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+for i in range(1, 10):
+    if i == 5:
+        break
+    print(i)
+</pre>
+
+<hr>
+
+<h3>2. continue Statement</h3>
+
+<p>
+The <b>continue</b> statement skips the current iteration of the loop
+and moves to the next iteration.
+</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+continue
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)
+</pre>
+
+<hr>
+
+<h3>3. pass Statement</h3>
+
+<p>
+The <b>pass</b> statement is a null operation.
+It is used as a placeholder where a statement is syntactically required
+but no action is needed.
+</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>
+pass
+</pre>
+
+<p><b>Example:</b></p>
+
+<pre>
+for i in range(3):
+    if i == 1:
+        pass
+    print(i)
+</pre>
+
+
+
+
+
+
+
+
+
 
 
 
